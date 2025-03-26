@@ -1,15 +1,11 @@
 package pedroleonez.spring_nelio.config;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import pedroleonez.spring_nelio.entities.UserEntity;
 import pedroleonez.spring_nelio.repositories.UserRepository;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 @Configuration
