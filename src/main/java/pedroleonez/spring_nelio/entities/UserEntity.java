@@ -8,6 +8,8 @@ import lombok.Setter;
 
 import java.io.Serial;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
@@ -27,4 +29,15 @@ public class UserEntity implements Serializable {
     private String email;
     private String phone;
     private String password;
+
+    @OneToMany(mappedBy = "client")
+    private List<OrderEntity> orders = new ArrayList<>();
+
+    public UserEntity(Long id, String name, String email, String phone, String password) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+        this.password = password;
+    }
 }
